@@ -1,0 +1,16 @@
+// mixins
+@mixin border-radius($radius: $base-rounded-corners) {
+  border-radius: $radius;
+}
+@mixin border-left-radius($radius: $base-rounded-corners) {
+  border-radius: $radius 0 0 $radius;
+}
+@mixin border-top-radius($radius: $base-rounded-corners) {
+  border-radius: $radius $radius 0 0;
+}
+@mixin border-bottom-right-radius($radius: $base-rounded-corners) {
+  border-radius: 0 0 $radius 0;
+}
+@mixin clearfix() {
+  overflow: hidden;
+}

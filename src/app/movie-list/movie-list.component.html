@@ -1,0 +1,21 @@
+<article>
+  Movies:
+  <section
+    *ngFor="let movie of movies | async"
+    class="movie movie-{{movie.$key}}"
+  >
+    <h2>{{movie.title}}</h2>
+    <span class="corner-display rank">
+      <h3>Rank</h3>
+      <span>{{movie.rank}}</span>
+    </span>
+    <span class="corner-display release">
+      <h3>Release Date</h3>
+      <span>{{movie.release | date}}</span>
+    </span>
+    <span class="corner-display tomato">
+      <h3>Tomato</h3>
+      <span>{{movie.tomato}}%</span>
+    </span>
+  </section>
+</article>

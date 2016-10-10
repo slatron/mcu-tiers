@@ -1,0 +1,22 @@
+// state classes
+[class^="icon-"] {
+  font-weight: bold;
+  font-size: $base-unit*1.5;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.destroy {
+  float: right;
+}
+
+.hand {
+  cursor: pointer;
+}

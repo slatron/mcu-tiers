@@ -1,0 +1,54 @@
+// movie
+// ==================
+.movie {
+  background-color: $color-gray;
+  background-size: cover;
+  margin: $base-unit*0.25 0;
+  color: $color-white;
+  min-height: 200px;
+  padding: 0;
+  position: relative;
+
+  h2 {
+    @include border-bottom-right-radius();
+    background-color: $color-black;
+    display: inline-block;
+    font-size: $base-font*2;
+    padding: $base-unit*0.25;
+  }
+
+  h3 {
+    display: inline-block;
+    font-size: $base-unit*0.55;
+  }
+
+  > span {
+    background-color: $color-black;
+    padding: $base-unit*0.25;
+    position: absolute;
+    > span {
+      font-size: $base-unit*1.15;
+    }
+  }
+
+  .rank {
+    bottom: 0;
+    left: 0;
+  }
+
+  .release {
+    top: 0;
+    right: 0;
+  }
+
+  .tomato {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.movie-gotg {
+  background-image: url(assets/gotg.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 -144px;
+}
