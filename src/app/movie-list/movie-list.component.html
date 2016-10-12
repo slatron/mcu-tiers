@@ -1,5 +1,8 @@
 <article>
-  Put Sortby Control Here
+  <app-tab-row
+    [names]="sortTabs"
+    (onSelectTab)="sortBy($event)"
+  ></app-tab-row>
   <section
     *ngFor="let movie of movies | async"
     class="movie movie-{{movie.$key}}"

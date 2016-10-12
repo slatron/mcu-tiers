@@ -9,10 +9,17 @@ import { FirebaseListObservable } from 'angularfire2';
 })
 export class MovieListComponent implements OnInit {
   movies: FirebaseListObservable<Movie[]>;
+  sortTabs: string[] = [
+    'rank', 'title', 'release', 'tomato'
+  ];
 
   constructor(private movieService: MovieService) {}
 
   ngOnInit() {
     this.movies = this.movieService.getFirebaseObservable();
+  }
+
+  sortBy(key) {
+    this.movies = this.movieService.getFirebaseObservable(key);
   }
 }

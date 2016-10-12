@@ -8,6 +8,7 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieService } from './movie.service';
 
 import { AngularFireModule } from 'angularfire2';
+import { TabRowComponent } from './tab-row/tab-row.component';
 export const firebaseConfig = {
   apiKey: "AIzaSyA4Ut5x488eODNFmnlisGKRSNYhuoHJ6Pw",
   authDomain: "mcu-tiers.firebaseapp.com",
@@ -19,7 +20,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    MovieListComponent
+    MovieListComponent,
+    TabRowComponent
   ],
   imports: [
     BrowserModule,

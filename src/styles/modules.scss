@@ -1,9 +1,61 @@
+// module: button
+.but-row .but {
+  margin-right: $base-unit;
+}
+
+%but,
+.but {
+  background: $color-ltgray;
+  border: none;
+  color: $color-dkblue;
+  cursor: pointer;
+  display: inline-block;
+  padding: $base-unit/2 $base-unit;
+  text-align: center;
+  text-decoration: none;
+
+  @include border-radius($base-rounded-corners);
+
+  &.active,
+  &:active {
+    background: $color-green;
+    color: $color-ltblue;
+  }
+
+  &:hover {
+    background-color: $color-dkgray;
+  }
+}
+
+.but[disabled] {
+  opacity: 0.2;
+}
+
+.but.tab {
+  @include border-top-radius($base-rounded-corners);
+
+  &.active,
+  &:active {
+    font-weight: bold;
+    background: $color-dkblue;
+    color: $color-white;
+  }
+
+  &.hover,
+  &:hover {
+    font-weight: bold;
+    background: $color-dkblue;
+    color: $color-white;
+  }
+}
+
 // movie
 // ==================
 .movie {
   background-color: $color-gray;
   background-size: cover;
   background-position: 0 0;
+  background-repeat: no-repeat;
   margin: $base-unit*0.25 0;
   color: $color-white;
   min-height: 200px;
@@ -48,60 +100,59 @@
   }
 }
 
-.movie-gotg {
-  background-image: url(assets/gotg.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 -10px;
-}
-
-.movie-cap3 {
-  background-image: url(assets/cap3.jpg);
-  background-repeat: no-repeat;
-}
-
-.movie-avengers2 {
-  background-image: url(assets/avengers2.jpg);
-  background-repeat: no-repeat;
-}
-
-.movie-cap2 {
-  background-image: url(assets/cap2.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 -230px;
-}
-
-.movie-iron3 {
-  background-image: url(assets/iron3.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 -100px;
-}
-
 .movie-ant {
   background-image: url(assets/ant.jpg);
-  background-repeat: no-repeat;
-}
-
-.movie-iron2 {
-  background-image: url(assets/iron2.jpg);
-  background-repeat: no-repeat;
-}
-
-.movie-iron {
-  background-image: url(assets/iron.jpg);
-  background-repeat: no-repeat;
-}
-
-.movie-thor {
-  background-image: url(assets/thor.jpg);
-  background-repeat: no-repeat;
-}
-
-.movie-thor2 {
-  background-image: url(assets/thor2.jpg);
-  background-repeat: no-repeat;
 }
 
 .movie-avengers {
   background-image: url(assets/avengers.jpg);
-  background-repeat: no-repeat;
+}
+
+.movie-avengers2 {
+  background-image: url(assets/avengers2.jpg);
+}
+
+.movie-cap {
+  background-image: url(assets/cap.jpg);
+}
+
+.movie-cap2 {
+  background-image: url(assets/cap2.jpg);
+  background-position: 0 -230px;
+}
+
+.movie-cap3 {
+  background-image: url(assets/cap3.jpg);
+}
+
+.movie-doctor {
+  background-image: url(assets/doctor.jpg);
+}
+
+.movie-gotg {
+  background-image: url(assets/gotg.jpg);
+}
+
+.movie-iron {
+  background-image: url(assets/iron.jpg);
+}
+
+.movie-iron2 {
+  background-image: url(assets/iron2.jpg);
+}
+
+.movie-iron3 {
+  background-image: url(assets/iron3.jpg);
+}
+
+.movie-hulk {
+  background-image: url(assets/hulk.jpg);
+}
+
+.movie-thor {
+  background-image: url(assets/thor.jpg);
+}
+
+.movie-thor2 {
+  background-image: url(assets/thor2.jpg);
 }
