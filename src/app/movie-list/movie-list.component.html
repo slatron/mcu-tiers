@@ -5,20 +5,31 @@
   ></app-tab-row>
   <section
     *ngFor="let movie of movies | async"
+    [class.active]="active === movie.$key"
+    [style.background-image]="'url(assets/' + movie.$key + '.jpg)' | safe"
+    (click)="active = movie.$key"
     class="movie movie-{{movie.$key}}"
   >
     <h2>{{movie.title}}</h2>
-    <span class="corner-display rank">
+    <aside class="corner-display rank">
       <span>{{movie.rank}}</span>
       <h3>My Rank</h3>
-    </span>
-    <span class="corner-display release align-right">
+    </aside>
+    <aside class="corner-display release align-right">
       <span>{{movie.release | date}}</span><br>
       <h3>Release Date</h3>
-    </span>
-    <span class="corner-display tomato">
+    </aside>
+    <aside class="corner-display tomato">
       <h3>Tomato</h3>
       <span>{{movie.tomato}}%</span>
+    </aside>
+    <nav>
+      <span>one</span>
+      <span>two</span>
+      <span>three</span>
+    </nav>
+    <span class="window">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique aliquam quisquam recusandae libero ullam vitae esse ut eaque dicta adipisci, eum perspiciatis unde corporis, nostrum hic quidem, temporibus aut fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sed eos, modi incidunt laborum aliquid, alias unde excepturi saepe facilis voluptatibus consectetur vitae sequi molestias. Minima provident nisi nobis dolorum.
     </span>
   </section>
 </article>

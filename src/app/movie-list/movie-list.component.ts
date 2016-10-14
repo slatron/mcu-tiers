@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 import { MovieService } from '../movie.service';
 import { Movie } from '../movie';
 import { FirebaseListObservable } from 'angularfire2';
@@ -9,6 +9,7 @@ import { FirebaseListObservable } from 'angularfire2';
 })
 export class MovieListComponent implements OnInit {
   movies: FirebaseListObservable<Movie[]>;
+  active: string;
   sortTabs: string[] = [
     'rank', 'title', 'release', 'tomato'
   ];

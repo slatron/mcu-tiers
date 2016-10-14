@@ -9,6 +9,7 @@ import { MovieService } from './movie.service';
 
 import { AngularFireModule } from 'angularfire2';
 import { TabRowComponent } from './tab-row/tab-row.component';
+import { SafePipe } from './pipes/safe.pipe';
 export const firebaseConfig = {
   apiKey: "AIzaSyA4Ut5x488eODNFmnlisGKRSNYhuoHJ6Pw",
   authDomain: "mcu-tiers.firebaseapp.com",
@@ -21,7 +22,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     MovieListComponent,
-    TabRowComponent
+    TabRowComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

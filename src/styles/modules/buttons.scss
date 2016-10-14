@@ -1,0 +1,50 @@
+// module: button
+.but-row .but {
+  margin-right: $base-unit;
+}
+
+%but,
+.but {
+  background: $color-ltgray;
+  border: none;
+  color: $color-dkblue;
+  cursor: pointer;
+  display: inline-block;
+  padding: $base-unit/2 $base-unit;
+  text-align: center;
+  text-decoration: none;
+
+  @include border-radius($base-rounded-corners);
+
+  &.active,
+  &:active {
+    background: $color-green;
+    color: $color-ltblue;
+  }
+
+  &:hover {
+    background-color: $color-dkgray;
+  }
+}
+
+.but[disabled] {
+  opacity: 0.2;
+}
+
+.but.tab {
+  @include border-top-radius($base-rounded-corners);
+
+  &.active,
+  &:active {
+    font-weight: bold;
+    background: $color-dkblue;
+    color: $color-white;
+  }
+
+  &.hover,
+  &:hover {
+    font-weight: bold;
+    background: $color-dkblue;
+    color: $color-white;
+  }
+}
