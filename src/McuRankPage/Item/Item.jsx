@@ -1,22 +1,21 @@
 import React, { useState } from 'react'
 
-const IMG_PATH ='src/assets/';
-
 const Item = ({item}) => {
   const [showReview, setShowReview] = useState(false);
   return (
     <section
       className={`item ${item.key}`}
       data-testid="item"
-      style={{backgroundImage: `url('/${IMG_PATH}${item.key}.jpg')`}}
+      style={{backgroundImage: `url('images/${item.key}.jpg')`}}
       key={item.key}
+      onClick={() => setShowReview(prev => !prev)} 
     >
       <span className="ranking clarify">{item.rank}</span>
       <span className="title clarify">
         {item.title}
       </span>
       {item.review && (
-        <span onClick={() => setShowReview(true)} className="icon-info clarify">
+        <span className="icon-info clarify">
           i
         </span>
       )}
