@@ -1,4 +1,5 @@
 :root {
+  font-size: 14px;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -7,7 +8,8 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #000000;
 
-  margin: 0;
+  width: 100%;
+  margin: 0 auto;
   padding: 0;
 
   font-synthesis: none;
@@ -19,5 +21,177 @@
 body, html {
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
+/* *** LAYOUT *** */
+
+.heading-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 1rem;;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: black;
+} 
+
+.heading-nav span {
+  font-weight: bold;
+}
+
+.heading-nav button {
+  padding: 0.5rem;
+}
+
+.page-content {
+  margin-top: 4rem;
+}
+
+/* *** MAIN ITEM DISPLAY *** */
+
+.item {
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  margin-left: 0.25rem;
+  position: relative;
+}
+
+.clarify {
+  border-radius: 1rem;
+  background: #0c5989;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.title {
+  left: 1rem;
+  position: absolute;
+  top: 1rem;
+  padding: 3px 6px;
+  font-weight: bold;
+  font-size: 1.5rem;
+} 
+
+.hand {
+  cursor: pointer;
+}
+
+.metacritic {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-weight: bold;
+  color: black;
+  border-radius: 6px;
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+.metacritic.top {
+  background-color: #00ce7a
+}
+
+.metacritic.mid {
+  background-color: #ffbd3f;
+}
+
+.metacritic.low {
+  background-color: #ff6874;
+}
+
+.ranking {
+  left: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  font-weight: bold;
+  padding: 3px 6px;
+  font-size: 1.2rem;
+}
+
+.item .icon-info {
+  right: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  padding: 0.75em;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  line-height: 0.25rem;
+  cursor: pointer;
+}
+
+.item-review {
+  position: absolute;
+  top: 0.15rem;
+  bottom: 0.15rem;
+  left: 0.15rem;
+  right: 0.15rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: rgb(41, 1, 1);
+  opacity: 0.75;
+}
+
+.item-review-text {
+  position: absolute;
+  top: 0.15rem;
+  bottom: 0.15rem;
+  left: 0.15rem;
+  right: 0.15rem;
+  padding: 1.5rem;
+  color: rgb(217, 202, 202);
+  font-size: 1.4rem;
+  cursor: pointer;
+  overflow-y: auto;
+}
+
+
+/* Mobile Styles Below */
+.mobile-show {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .heading-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.5rem 0;
+  } 
+
+  .heading-nav button {
+    padding: 0.25rem;
+  }
+
+  .page-content {
+    margin-top: 3rem;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .mobile-show {
+    display: flex;
+  }
+
+  .title {
+    padding: 3px 6px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  } 
+}
