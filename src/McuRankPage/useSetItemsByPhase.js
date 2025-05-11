@@ -28,16 +28,15 @@ export const PHASES = [
     desc: 'Phase Five',
     title: 'p5',
     start: '2022-11-13',
-    end: '2025-02-16',
+    end: '2025-06-01',
   },
 ];
 const itemsByPhase = {};
 
 export const useSetItemsByPhase = (allMovies) => {
   if (allMovies.length) {
-    const MCUEntries = allMovies.filter(item => !item.honorary);
     PHASES.forEach(phase => {
-      itemsByPhase[phase.title] = MCUEntries.filter(item => item.release >= phase.start && item.release <= phase.end);
+      itemsByPhase[phase.title] = allMovies.filter(item => item.release >= phase.start && item.release <= phase.end);
     })
   }
   return itemsByPhase;

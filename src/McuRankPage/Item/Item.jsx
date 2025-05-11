@@ -5,7 +5,19 @@ import {AppContext} from '/src/McuRankPage/McuRankPage';
 
 const Item = ({item}) => {
   const [showReview, setShowReview] = useState(false);
-  const {filterMovies, filterTv} = useContext(AppContext);
+  const {
+    filterMovies,
+    filterTv,
+    allTiers,
+    itemsByPhase,
+    allMovies,
+    page} = useContext(AppContext);
+
+    console.log({ filterMovies, filterTv, allTiers,
+      itemsByPhase,
+      allMovies,
+      page, item });
+
 
   if (!filterMovies && item.medium === 'movie') {
     return null;
@@ -31,9 +43,9 @@ const Item = ({item}) => {
       key={item.key}
       onClick={toggleReview} 
     >
-      <span className="ranking clarify">Rank: {item.rank}</span>
+      {item.tier !== 'incomplete' && <span className="ranking clarify">Rank: {item.rank}</span>}
       <span className="title clarify">
-        {item.title} {item.honorary ? '(honorary)' : ''}
+        {item.title}
       </span>
       <span className={`metacritic ${rating}`}>
         {mc}
