@@ -2,10 +2,10 @@ import React, {createContext, useMemo} from 'react';
 import TiersList from './TiersList';
 import PhasesList from './PhasesList';
 import Item from './Item';
-import api from '/src/api/api';
+import api from '../../src/api/api';
 import {useSetTierNames} from './useSetTierNames';
 import {useSetItemsByPhase} from './useSetItemsByPhase';
-import {sorting} from '/src/utils/sorting';
+import {sorting} from '../../src/utils/sorting';
 
 const SORT = {
   'TIER': 'TIER',
